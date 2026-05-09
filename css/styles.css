@@ -3,8 +3,8 @@ body {
     margin: 0 auto;
     padding: 0 2rem;
     font-family: "Outfit", sans-serif;
-    color: #333;
-    background-color: #f2f2f2;
+    color: #f2f2f2;
+    background-color: #333;
 }
 
 nav {
@@ -64,6 +64,52 @@ nav a:first-child {
 
 .buttonlight:hover {
     background-color: #e4e4e4;
+}
+
+/* icon styling */
+.icons {
+    display: flex;
+    column-gap: 1.5rem;
+}
+.icon {
+    width: 1.75rem;
+    height: 1.75rem;
+    padding: .75rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #f2f2f2;
+    border-radius: 50%;
+    outline: 2px solid #f2f2f2;
+    transition-property: outline-offset, outline-color, background-color;
+    transition-duration: .25s;
+}
+.icon:hover {
+    outline-offset: .15rem;
+    animation: shake .75s;
+}
+
+.icon--instagram:hover {
+    background-image: radial-gradient(circle at 30% 107%,
+    #fdf497 0%, #fdf497 5%,
+    #fd5949 45%, #d6249f 60%,
+    #285AEB 90%);
+    outline-color: #a02d76;
+}
+.icon--linkedin:hover {
+    background-color: #0077b5;
+    outline-color: #0077b5;
+}
+.icon--gitgub:hover {
+    background-color: #2ea44f;
+    outline-color: #2ea44f;
+}
+
+@keyframes shake {
+    10%{transform: rotate(10deg)};
+    20%{transform: rotate(-10deg)};
+    30%{transform: rotate(10deg)};
+    40%{transform: rotate(-10deg)};
 }
 
 footer {
