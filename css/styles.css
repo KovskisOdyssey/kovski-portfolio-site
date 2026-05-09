@@ -23,6 +23,9 @@ body {
     font-family: "Outfit", sans-serif;
     color: var(--text);
     background-color: var(--page-bg);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 nav {
@@ -44,8 +47,8 @@ nav a:first-child {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 4rem 0;
-    gap: 1rem;
+    padding: 8rem 0;
+    gap: 1.75rem;
 }
 
 .hero h1 {
@@ -144,6 +147,7 @@ footer {
     font-size: 1rem;
     font-weight: 200;
     display: flex;
+    justify-content: space-between;
     align-items: center;
     padding: 1.5rem 0;
 }
