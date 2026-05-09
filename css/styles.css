@@ -1,15 +1,15 @@
 body {
-    max-width: 85em;
+    max-width: 75em;
     margin: 0 auto;
     padding: 0 2rem;
     font-family: "Outfit", sans-serif;
     color: #333;
-    background-color: #e0e0e0;
+    background-color: #f2f2f2;
 }
 
 nav {
-    font-size: 1.5rem;
-    font-weight: 500;
+    font-size: 1.25rem;
+    font-weight: 400;
     display: flex;
     align-items: center;
     padding: 1.5rem 0;
@@ -17,8 +17,8 @@ nav {
 }
 
 nav a:first-child {
-    font-weight: 600;
-    font-size: 2rem;
+    font-weight: 500;
+    font-size: 1.75rem;
     margin-right: auto;
 }
 
@@ -37,10 +37,12 @@ nav a:first-child {
 
 .hero .buttondark,
 .hero .buttonlight {
-    /* TODO(human): Style both buttons here */
     cursor: pointer;
     font-family: inherit;
-    font-size: 1rem;
+    font-size: 1.25rem;
+    font-weight: 200;
+    padding: .50rem .75rem;
+    margin: 0 .1rem;
 }
 
 footer {
