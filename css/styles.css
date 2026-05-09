@@ -35,14 +35,35 @@ nav a:first-child {
     margin: 0;
 }
 
-.hero .buttondark,
-.hero .buttonlight {
+.buttondark, .buttonlight {
     cursor: pointer;
+    width: 8rem;
+    border-radius: 10px;
     font-family: inherit;
-    font-size: 1.25rem;
-    font-weight: 200;
-    padding: .50rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    padding: .60rem .75rem;
     margin: 0 .1rem;
+}
+
+.buttondark {
+    background-color: #222;
+    border-style: none;
+    color: #f2f2f2;
+}
+
+.buttondark:hover {
+    background-color: #333;
+}
+
+.buttonlight {
+    background-color: #f2f2f2;
+    border: 1px solid #222;
+    color: #222;
+}
+
+.buttonlight:hover {
+    background-color: #e4e4e4;
 }
 
 footer {
