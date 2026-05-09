@@ -1,10 +1,28 @@
+:root {
+    /* Neutrals */
+    --page-bg: #1a1a2e;
+    --border: #3a3a5c;
+
+    /* Text */
+    --text: #e0e0e8;
+    --text-desc: #aaaac0;
+    --text-muted: #5a5a78;
+
+    /* Accents */
+    --sakura: #d92d6a;
+    --sakura-dark: #a3204f;
+
+    --btn-bg: #363660;
+    --btn-shadow: #2c2c50;
+}
+
 body {
     max-width: 75em;
     margin: 0 auto;
     padding: 0 2rem;
     font-family: "Outfit", sans-serif;
-    color: #f2f2f2;
-    background-color: #333;
+    color: var(--text);
+    background-color: var(--page-bg);
 }
 
 nav {
@@ -31,40 +49,48 @@ nav a:first-child {
 }
 
 .hero h1 {
-    font-size: 4rem;
+    font-size: 6rem;
     margin: 0;
+    font-weight: 500;
 }
 
-.buttondark, .buttonlight {
-    cursor: pointer;
-    width: 8rem;
-    border-radius: 10px;
+.typewriter {
+    margin: 0;
+    color: var(--text-desc);
+    font-size: 1.5rem;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 10px 20px;
+    background: var(--btn-bg);
+    border: 1px solid var(--btn-shadow);
+    border-radius: 12px;
     font-family: inherit;
     font-size: 1rem;
-    font-weight: 400;
-    padding: .60rem .75rem;
-    margin: 0 .1rem;
+    font-weight: 500;
+    color: var(--text);
+    cursor: pointer;
+    box-shadow: 0 3px 0 var(--btn-shadow);
+    transform: translateY(0);
+    transition: transform 0.1s, box-shadow 0.1s;
+    text-decoration: none;
+    line-height: 1.2;
 }
 
-.buttondark {
-    background-color: #222;
-    border-style: none;
-    color: #f2f2f2;
-}
+.btn:hover { transform: translateY(-2px); box-shadow: 0 5px 0 var(--btn-shadow); }
+.btn:active { transform: translateY(2px); box-shadow: 0 1px 0 var(--btn-shadow); }
 
-.buttondark:hover {
-    background-color: #333;
+.btn.primary {
+    background: var(--sakura);
+    border-color: var(--sakura-dark);
+    box-shadow: 0 3px 0 var(--sakura-dark);
 }
-
-.buttonlight {
-    background-color: #f2f2f2;
-    border: 1px solid #222;
-    color: #222;
-}
-
-.buttonlight:hover {
-    background-color: #e4e4e4;
-}
+.btn.primary:hover { box-shadow: 0 5px 0 var(--sakura-dark); }
+.btn.primary:active { box-shadow: 0 1px 0 var(--sakura-dark); }
 
 /* icon styling */
 .icons {
@@ -78,9 +104,10 @@ nav a:first-child {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    color: #f2f2f2;
+    color: var(--text);
     border-radius: 50%;
-    outline: 2px solid #f2f2f2;
+    background-color: var(--btn-bg);
+    outline: 2px solid var(--btn-shadow);
     transition-property: outline-offset, outline-color, background-color;
     transition-duration: .25s;
 }
@@ -100,16 +127,16 @@ nav a:first-child {
     background-color: #0077b5;
     outline-color: #0077b5;
 }
-.icon--gitgub:hover {
+.icon--github:hover {
     background-color: #2ea44f;
     outline-color: #2ea44f;
 }
 
 @keyframes shake {
-    10%{transform: rotate(10deg)};
-    20%{transform: rotate(-10deg)};
-    30%{transform: rotate(10deg)};
-    40%{transform: rotate(-10deg)};
+    10% { transform: rotate(10deg); }
+    20% { transform: rotate(-10deg); }
+    30% { transform: rotate(10deg); }
+    40% { transform: rotate(-10deg); }
 }
 
 footer {
@@ -122,10 +149,10 @@ footer {
 }
 
 a {
-    color: #333;
+    color: var(--text);
     text-decoration: none;
 }
 a:visited {
-    color: #333;
+    color: var(--text);
     text-decoration: none;
 }
