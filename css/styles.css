@@ -44,10 +44,11 @@ nav a:first-child {
 }
 
 .hero {
+    min-height: 90vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 8rem 0;
+    justify-content: center;
     gap: 1.75rem;
 }
 
@@ -70,7 +71,7 @@ h2 {
 }
 h3 {
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: 500;
     margin: 0;
 }
@@ -125,6 +126,46 @@ h3 {
     line-height: 2rem;
     font-weight: 200;
     color: var(--text-desc);
+}
+
+.skillcontent {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.skillitem p {
+    margin: 0;
+    font-size: .8rem;
+    font-weight: 300;
+    padding-top: .25rem;
+    color: var(--text-desc);
+}
+.skillitem h3 {
+    font-size: 1.1rem;
+}
+
+.skillitem {
+    border: 1px solid var(--btn-shadow);
+    border-radius: 24px;
+    background-color: var(--btn-bg);
+    width: calc((100% - 7 * 1.5rem) / 8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    aspect-ratio: 1/1;
+}
+
+.skillitem img {
+    height: 3.25rem;
+    padding-bottom: .6rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
 }
 
 .btn {
