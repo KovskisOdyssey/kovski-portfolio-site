@@ -185,7 +185,7 @@ h3 {
 .timeline-entry::after {
     content: "";
     position: absolute;
-    left: -2.05rem;
+    left: -2rem;
     top: 0;
     bottom: 0;
     width: 1px;
