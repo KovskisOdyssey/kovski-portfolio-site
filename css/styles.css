@@ -44,6 +44,7 @@ nav a:first-child {
 }
 
 .hero {
+    line-height: 0;
     min-height: 90vh;
     display: flex;
     flex-direction: column;
@@ -54,14 +55,14 @@ nav a:first-child {
 
 .hero h1 {
     font-size: 6rem;
-    margin: 0;
+    margin: 4rem 0 0 0;
     font-weight: 500;
 }
 
 .typewriter {
-    margin: 0;
+    margin: 2.5rem 0;
     color: var(--text-desc);
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
 h2 {
@@ -129,8 +130,8 @@ h3 {
 }
 
 .skillcontent {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
     gap: 1rem;
 }
 
@@ -149,7 +150,6 @@ h3 {
     border: 1px solid var(--btn-shadow);
     border-radius: 24px;
     background-color: var(--btn-bg);
-    width: calc((100% - 7 * 1.5rem) / 8);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -162,6 +162,94 @@ h3 {
     padding-bottom: .6rem;
 }
 
+/* timeline */
+.timeline {
+    display: flex;
+    flex-direction: column;
+    padding-left: 2rem;
+}
+
+.timeline-entry {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    position: relative;
+    padding-bottom: 2rem;
+}
+
+.timeline-entry:last-child {
+    padding-bottom: 0;
+}
+
+/* line segment */
+.timeline-entry::after {
+    content: "";
+    position: absolute;
+    left: -2.05rem;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: var(--text-desc);
+    transform: translateX(-50%);
+}
+
+.timeline-entry:first-child::after {
+    top: 50%;
+}
+
+.timeline-entry:last-child::after {
+    bottom: 50%;
+}
+
+/* dot */
+.timeline-entry::before {
+    content: "";
+    position: absolute;
+    left: -2rem;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: .6rem;
+    height: .6rem;
+    border-radius: 50%;
+    border: 2px solid var(--sakura);
+    background-color: var(--page-bg);
+    z-index: 1;
+}
+
+.timeline-date {
+    min-width: 8rem;
+    font-size: 1rem;
+    font-weight: 300;
+    color: var(--text-desc);
+}
+
+.timeline-card {
+    flex: 1;
+    padding: 1.5rem;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    background-color: var(--btn-bg);
+}
+
+.timeline-org {
+    font-size: .75rem;
+    font-weight: 600;
+    letter-spacing: .1em;
+    color: var(--sakura);
+    margin: 0 0 .25rem;
+}
+
+.timeline-card h3 {
+    text-align: left;
+    margin: 0 0 .25rem;
+}
+
+.timeline-card p:last-child {
+    margin: 0;
+    color: var(--text-desc);
+    font-weight: 300;
+}
+
 main {
     display: flex;
     flex-direction: column;
@@ -172,32 +260,31 @@ main {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 6px;
-    padding: 10px 20px;
+    width: 10rem;
+    padding: .7rem 1.4rem;
     background: var(--btn-bg);
     border: 1px solid var(--btn-shadow);
     border-radius: 12px;
-    font-family: inherit;
-    font-size: 1rem;
+    font-size: 1.35rem;
     font-weight: 500;
     color: var(--text);
     cursor: pointer;
-    box-shadow: 0 3px 0 var(--btn-shadow);
+    box-shadow: 0 4px 0 var(--btn-shadow);
     transform: translateY(0);
     transition: transform 0.1s, box-shadow 0.1s;
     text-decoration: none;
     line-height: 1.2;
 }
 
-.btn:hover { transform: translateY(-2px); box-shadow: 0 5px 0 var(--btn-shadow); }
-.btn:active { transform: translateY(2px); box-shadow: 0 1px 0 var(--btn-shadow); }
+.btn:hover { transform: translateY(-4px); box-shadow: 0 8px 0 var(--btn-shadow); }
+.btn:active { transform: translateY(4px); box-shadow: 0 1px 0 var(--btn-shadow); }
 
 .btn.primary {
     background: var(--sakura);
     border-color: var(--sakura-dark);
-    box-shadow: 0 3px 0 var(--sakura-dark);
+    box-shadow: 0 4px 0 var(--sakura-dark);
 }
-.btn.primary:hover { box-shadow: 0 5px 0 var(--sakura-dark); }
+.btn.primary:hover { box-shadow: 0 8px 0 var(--sakura-dark); }
 .btn.primary:active { box-shadow: 0 1px 0 var(--sakura-dark); }
 
 /* icon styling */
@@ -206,8 +293,8 @@ main {
     column-gap: 1.5rem;
 }
 .icon {
-    width: 1.75rem;
-    height: 1.75rem;
+    width: 2rem;
+    height: 2rem;
     padding: .75rem;
     display: inline-flex;
     align-items: center;
