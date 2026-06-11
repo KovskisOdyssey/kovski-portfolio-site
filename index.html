@@ -3,7 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ben Velkovski | Portfolio</title>
+    <title>Ben Velkovski | Graphic Designer</title>
+    <meta name="description" content="Ben Velkovski is a graphic designer in Sudbury, Ontario specializing in brand identity systems, print production, and motion — featuring the NOSM University rebrand.">
+    <link rel="canonical" href="https://kovskidesign.com/">
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+
+    <!-- Social link previews -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Ben Velkovski — Graphic Designer">
+    <meta property="og:description" content="Brand identity systems, print production, and motion. Featuring the NOSM University rebrand.">
+    <meta property="og:url" content="https://kovskidesign.com/">
+    <meta property="og:image" content="https://kovskidesign.com/assets/projects/nosm.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Apply the saved theme before first paint to avoid a flash of the wrong theme -->
+    <script>
+        (function () {
+            var theme = null;
+            try { theme = localStorage.getItem("theme"); } catch (e) {}
+            if (!theme && window.matchMedia("(prefers-color-scheme: light)").matches) theme = "light";
+            if (theme) document.documentElement.setAttribute("data-theme", theme);
+        })();
+    </script>
+
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/main.js" defer></script>
@@ -12,16 +34,35 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Ben Velkovski",
+        "jobTitle": "Graphic Designer",
+        "url": "https://kovskidesign.com/",
+        "email": "mailto:benjaminvelkovski67@gmail.com",
+        "address": { "@type": "PostalAddress", "addressLocality": "Sudbury", "addressRegion": "ON", "addressCountry": "CA" },
+        "alumniOf": { "@type": "CollegeOrUniversity", "name": "Cambrian College" },
+        "sameAs": [
+            "https://www.linkedin.com/in/velkovskiben/",
+            "https://www.instagram.com/velkovski/",
+            "https://github.com/KovskisOdyssey"
+        ]
+    }
+    </script>
 </head>
 
 <body>
+    <a class="skip-link" href="#main">Skip to content</a>
     <nav>
         <a href="#hero">Ben Velkovski</a>
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Work</a>
         <a href="#contact">Contact</a>
-        <button id="theme-toggle" aria-label="Toggle light/dark mode">
+        <button id="theme-toggle" aria-label="Light theme" aria-pressed="false">
             <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <circle cx="12" cy="12" r="5"/>
                 <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
@@ -34,30 +75,32 @@
             </svg>
         </button>
     </nav>
-    <section class="hero" id="hero">
-        <div class="avatar">
-            <img src="assets/bug.gif" alt="Animated avatar">
-        </div>
-        <h1>Ben Velkovski</h1>
-        <div class="typewriter">
-            <p>Designing</p>
-            <!-- add typewriter part -->
-        </div>
-        <div>
-            <button href="#projects" class="btn primary">View Work</button>
-            <button href="#contact" class="btn generic">Contact</button>
-        </div>
-        <div class="icons">
-            <a href="#" class="icon icon--instagram"><img src="assets/icons/instagram.svg" alt="Instagram"></a>
-            <a href="#" class="icon icon--linkedin"><img src="assets/icons/linkedin.svg" alt="LinkedIn"></a>
-            <a href="#" class="icon icon--github"><img src="assets/icons/github.svg" alt="GitHub"></a>
-        </div>
-    </section>
-    <main>
+    <main id="main">
+        <section class="hero" id="hero">
+            <div class="avatar">
+                <img src="assets/bug.gif" alt="Animated pixel-art bug avatar">
+            </div>
+            <h1>Ben Velkovski</h1>
+            <div class="typewriter">
+                <p>
+                    <span class="sr-only">Designing brands, print, motion, and the web.</span>
+                    <span class="typewriter-text" aria-hidden="true">Designing</span>
+                </p>
+            </div>
+            <div class="hero-actions">
+                <a href="#projects" class="btn primary">View Work</a>
+                <a href="#contact" class="btn generic">Contact</a>
+            </div>
+            <div class="icons">
+                <a href="https://www.instagram.com/velkovski/" target="_blank" rel="noopener" class="icon icon--instagram"><img src="assets/icons/instagram.svg" alt="Instagram"></a>
+                <a href="https://www.linkedin.com/in/velkovskiben/" target="_blank" rel="noopener" class="icon icon--linkedin"><img src="assets/icons/linkedin.svg" alt="LinkedIn"></a>
+                <a href="https://github.com/KovskisOdyssey" target="_blank" rel="noopener" class="icon icon--github"><img src="assets/icons/github.svg" alt="GitHub"></a>
+            </div>
+        </section>
         <section class="about" id="about">
             <h2>About Me</h2>
             <div class="aboutbody">
-                <img class="aboutimg" src="assets/8cfeb9de5a4c071bb29d2b07ef50e3cf.gif" alt="About me photo">
+                <img class="aboutimg" src="assets/8cfeb9de5a4c071bb29d2b07ef50e3cf.gif" alt="Pixel-art animation of a black cat">
                 <div class="aboutcontent">
                     <div class="cards">
                         <div class="card">
@@ -77,52 +120,50 @@
                             </div>
                         </div>
                     </div>
-                    <p class="aboutdesc">I'm a very organized person, I always plan everything and meditate on my decisions, I love the world of technology, I have experience working as a freelancer on Fiverr developing websites with frontend and backend technologies. </p>
+                    <p class="aboutdesc">I'm Ben — a graphic designer who thinks about systems before surfaces. I build brand identities, visual languages, and the frameworks that keep them consistent across every touchpoint. When the project calls for it, I'll also write the code, shoot the photography, or draft the copy — because the work doesn't care about your job title.</p>
                 </div>
             </div>
         </section>
         <section id="skills">
             <h2>Skills</h2>
             <div class="skillcontent">
-                <div class="skillitem"><img src="assets/icons/figma.svg" alt=""><h3>Figma</h3><p>DESIGN</p></div>
-                <div class="skillitem"><img src="assets/icons/illustrator.svg" alt=""><h3>Illustrator</h3><p>DESIGN</p></div>
-                <div class="skillitem"><img src="assets/icons/photoshop.svg" alt=""><h3>Photoshop</h3><p>DESIGN</p></div>
-                <div class="skillitem"><img src="assets/icons/indesign.svg" alt=""><h3>InDesign</h3><p>DESIGN</p></div>
-                <div class="skillitem"><img src="assets/icons/aftereffects.svg" alt=""><h3>After Effects</h3><p>MOTION</p></div>
-                <div class="skillitem"><img src="assets/icons/premiere.svg" alt=""><h3>Premiere</h3><p>VIDEO</p></div>
-                <div class="skillitem"><img src="assets/icons/html5.svg" alt=""><h3>HTML</h3><p>WEB</p></div>
-                <div class="skillitem"><img src="assets/icons/css3.svg" alt=""><h3>CSS</h3><p>WEB</p></div>
-                <div class="skillitem"><img src="assets/icons/wordpress.svg" alt=""><h3>Wordpress</h3><p>WEB</p></div>
-                <div class="skillitem"><img src="assets/icons/python.svg" alt=""><h3>Python</h3><p>CODE</p></div>
-                <div class="skillitem"><img src="assets/icons/git.svg" alt=""><h3>Git</h3><p>CODE</p></div>
-                <div class="skillitem"><img src="assets/icons/maya.svg" alt=""><h3>Maya</h3><p>3D</p></div>
+                <div class="skillitem"><img src="assets/icons/figma.svg" alt=""><p class="skillname">Figma</p><p>DESIGN</p></div>
+                <div class="skillitem"><img src="assets/icons/illustrator.svg" alt=""><p class="skillname">Illustrator</p><p>DESIGN</p></div>
+                <div class="skillitem"><img src="assets/icons/photoshop.svg" alt=""><p class="skillname">Photoshop</p><p>DESIGN</p></div>
+                <div class="skillitem"><img src="assets/icons/indesign.svg" alt=""><p class="skillname">InDesign</p><p>PRINT</p></div>
+                <div class="skillitem"><img src="assets/icons/aftereffects.svg" alt=""><p class="skillname">After Effects</p><p>MOTION</p></div>
+                <div class="skillitem"><img src="assets/icons/premiere.svg" alt=""><p class="skillname">Premiere</p><p>VIDEO</p></div>
+                <div class="skillitem"><img src="assets/icons/html5.svg" alt=""><p class="skillname">HTML</p><p>WEB</p></div>
+                <div class="skillitem"><img src="assets/icons/css3.svg" alt=""><p class="skillname">CSS</p><p>WEB</p></div>
+                <div class="skillitem"><img src="assets/icons/wordpress.svg" alt=""><p class="skillname">WordPress</p><p>WEB</p></div>
+                <div class="skillitem"><img src="assets/icons/git.svg" alt=""><p class="skillname">Git</p><p>CODE</p></div>
             </div>
         </section>
         <section id="experience">
             <h2>Experience</h2>
             <div class="timeline">
                 <div class="timeline-entry">
-                    <span class="timeline-date">2022 — Now</span>
+                    <span class="timeline-date">2025 — Now</span>
                     <div class="timeline-card">
                         <p class="timeline-org">NOSM U</p>
                         <h3>Graphic Designer</h3>
-                        <p>Led visual rebrand of Canada's first independent medical university</p>
+                        <p>Led the complete CEPD rebrand and a 300+ recommendation overhaul of the university brand guide</p>
                     </div>
                 </div>
                 <div class="timeline-entry">
-                    <span class="timeline-date">2020 — 2022</span>
+                    <span class="timeline-date">2024</span>
                     <div class="timeline-card">
-                        <p class="timeline-org">INDEPENDENT</p>
-                        <h3>Freelance Designer</h3>
-                        <p>Brand identity + editorial work for small clients</p>
+                        <p class="timeline-org">NOSM U</p>
+                        <h3>Design Placement</h3>
+                        <p>CampMed and Northern Constellations logo redesigns — both adopted university-wide</p>
                     </div>
                 </div>
                 <div class="timeline-entry">
-                    <span class="timeline-date">2020</span>
+                    <span class="timeline-date">2022 — 2025</span>
                     <div class="timeline-card">
                         <p class="timeline-org">CAMBRIAN</p>
-                        <h3>Dipl. Graphic Design</h3>
-                        <p>Graduated with honors</p>
+                        <h3>Advanced Diploma, Graphic Design</h3>
+                        <p>Graduated a Cambrian Scholar with a 3.73 GPA</p>
                     </div>
                 </div>
             </div>
@@ -130,63 +171,82 @@
         <section id="projects">
             <h2>Projects</h2>
             <div class="projectsbody">
-                <a class="project-card flagship" href="#">
+                <!-- Remaining cards become <a href="case-studies/..."> as their pages are built -->
+                <a class="project-card flagship" href="case-studies/nosm-university-rebrand.html">
                     <div class="project-media">
                         <span class="project-num">01</span>
                         <span class="project-flag">★ FLAGSHIP</span>
-                        <img src="assets/projects/nosm.jpg" alt="NOSM University Rebrand">
+                        <img src="assets/projects/nosm.jpg" alt="Cover of the NOSM University brand guide">
                     </div>
                     <div class="project-info">
                         <h3>NOSM University Rebrand</h3>
-                        <p>A full visual identity system for Canada's first independent medical university.</p>
+                        <p>A comprehensive identity program for Canada's first independent medical university. I rebuilt the brand guide through 300+ recommendations across three drafts, authored the multilingual logo-usage framework and colour architecture, and presented brand direction to senior leadership — coordinating vendor production across print, apparel, and embroidery.</p>
                         <div class="project-tags">
-                            <span class="project-tag">BRAND</span>
-                            <span class="project-tag">IDENTITY</span>
-                            <span class="project-tag">GUIDE</span>
+                            <span class="project-tag">BRAND IDENTITY</span>
+                            <span class="project-tag">LOGO SYSTEM</span>
+                            <span class="project-tag">BRAND GUIDE</span>
+                            <span class="project-tag">PRINT PRODUCTION</span>
                         </div>
                     </div>
                 </a>
-                <a class="project-card" href="#">
+                <article class="project-card">
                     <div class="project-media">
                         <span class="project-num">02</span>
-                        <img src="assets/projects/wayfinding.jpg" alt="Campus Wayfinding Maps">
+                        <img src="assets/projects/cepd.jpg" alt="Grid of phone mockups showing CEPD social media templates">
+                    </div>
+                    <div class="project-info">
+                        <h3>CEPD Brand Identity</h3>
+                        <p>Two complete brand systems for NOSM's continuing education portfolio: a mitosis-inspired visual language approved at the AVP level, and the full production system that shipped — templates, conference materials, social media, and a coded HTML newsletter.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">BRAND IDENTITY</span>
+                            <span class="project-tag">VISUAL SYSTEM</span>
+                            <span class="project-tag">EMAIL DEV</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <div class="project-media">
+                        <span class="project-num">03</span>
+                        <img src="assets/projects/wayfinding.jpg" alt="Illustrated map of Northern Ontario showing NOSM campuses and clerkship sites">
                     </div>
                     <div class="project-info">
                         <h3>Campus Wayfinding Maps</h3>
-                        <p>Illustrated maps balancing function with institutional identity.</p>
+                        <p>Three illustrated location guides covering NOSM's campuses and 19 clerkship sites across Northern Ontario — hand-traced in Illustrator, balancing functional wayfinding with institutional identity, prepped as vendor-ready print files.</p>
                         <div class="project-tags">
                             <span class="project-tag">ILLUSTRATION</span>
+                            <span class="project-tag">WAYFINDING</span>
                             <span class="project-tag">PRINT</span>
                         </div>
                     </div>
-                </a>
-                <a class="project-card" href="#">
+                </article>
+                <article class="project-card">
                     <div class="project-media">
-                        <span class="project-num">03</span>
-                        <img src="assets/projects/digital.jpg" alt="Digital Campaigns">
+                        <span class="project-num">04</span>
+                        <img src="assets/projects/digital.jpg" alt="Northern Constellations conference ad designed for hospital digital screens">
                     </div>
                     <div class="project-info">
                         <h3>Digital Campaigns</h3>
-                        <p>Motion graphics, social assets, and template systems for the edges of the brand.</p>
+                        <p>Multi-channel campaign assets for NOSM — holiday motion graphics, hospital digital ads, conference promotion, and social campaigns, extending the brand from screen to print to motion.</p>
                         <div class="project-tags">
                             <span class="project-tag">MOTION</span>
                             <span class="project-tag">SOCIAL</span>
+                            <span class="project-tag">CAMPAIGN</span>
                         </div>
                     </div>
-                </a>
+                </article>
             </div>
         </section>
         <section id="contact">
             <h2>Contact</h2>
             <div class="contact-cards">
-                <a href="#" class="contact-card">
+                <a href="https://www.instagram.com/velkovski/" target="_blank" rel="noopener" class="contact-card">
                     <span class="icon icon--instagram"><img src="assets/icons/instagram.svg" alt=""></span>
                     <div class="contact-info">
                         <p class="contact-label">Instagram</p>
                         <p class="contact-value">@velkovski</p>
                     </div>
                 </a>
-                <a href="https://linkedin.com/in/velkovskiben" class="contact-card">
+                <a href="https://www.linkedin.com/in/velkovskiben/" target="_blank" rel="noopener" class="contact-card">
                     <span class="icon icon--linkedin"><img src="assets/icons/linkedin.svg" alt=""></span>
                     <div class="contact-info">
                         <p class="contact-label">LinkedIn</p>
