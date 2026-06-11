@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<!--
+  ════════════════════════════════════════════════════════════════
+  CASE STUDY TEMPLATE — copy this file for each new project.
+  Checklist when copying:
+    1. Save as case-studies/<project-slug>.html
+    2. Update <title>, meta description, canonical, and og:* tags
+    3. Update the header: title, subtitle, meta bar values
+    4. Swap the hero image + alt
+    5. Edit/duplicate/delete the <section class="cs-section"> blocks
+       (each block = h2 + caption + figure; figure is either a single
+        <img> or a 2-up <div class="cs-grid">)
+    6. Rewrite the outcome strip bullets
+    7. Point the pager at the real prev/next case study pages
+  Every spot is marked with an EDIT comment.
+  ════════════════════════════════════════════════════════════════
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- EDIT: title + description + URLs + og:image per project -->
+    <title>NOSM University Rebrand | Ben Velkovski</title>
+    <meta name="description" content="Case study: rebuilding NOSM University's brand guide through 300+ recommendations — logo policy, colour architecture, and a multilingual decision framework.">
+    <link rel="canonical" href="https://kovskidesign.com/case-studies/nosm-university-rebrand.html">
+    <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="NOSM University Rebrand — Ben Velkovski">
+    <meta property="og:description" content="Brand governance for Canada's first independent medical university: 300+ recommendations, a multilingual logo framework, and a colour architecture.">
+    <meta property="og:url" content="https://kovskidesign.com/case-studies/nosm-university-rebrand.html">
+    <meta property="og:image" content="https://kovskidesign.com/assets/projects/nosm/hero.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Apply the saved theme before first paint to avoid a flash of the wrong theme -->
+    <script>
+        (function () {
+            var theme = null;
+            try { theme = localStorage.getItem("theme"); } catch (e) {}
+            if (!theme && window.matchMedia("(prefers-color-scheme: light)").matches) theme = "light";
+            if (theme) document.documentElement.setAttribute("data-theme", theme);
+        })();
+    </script>
+
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/case-study.css">
+    <script src="../js/main.js" defer></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <nav>
+        <a href="../index.html">Ben Velkovski</a>
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#skills">Skills</a>
+        <a href="../index.html#projects">Work</a>
+        <a href="../index.html#contact">Contact</a>
+        <button id="theme-toggle" aria-label="Light theme" aria-pressed="false">
+            <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="5"/>
+                <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+            </svg>
+            <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+            </svg>
+        </button>
+    </nav>
+    <main id="main">
+        <header class="cs-header">
+            <a class="cs-back" href="../index.html#projects">← All work</a>
+            <!-- EDIT: project title + subtitle -->
+            <h1>NOSM University Rebrand</h1>
+            <p class="cs-subtitle">Brand governance for Canada's first independent medical university.</p>
+            <!-- EDIT: meta bar values -->
+            <div class="cs-meta">
+                <div><p class="cs-meta-label">ROLE</p><p class="cs-meta-value">Graphic Designer</p></div>
+                <div><p class="cs-meta-label">YEAR</p><p class="cs-meta-value">2025</p></div>
+                <div><p class="cs-meta-label">CLIENT</p><p class="cs-meta-value">NOSM University</p></div>
+                <div><p class="cs-meta-label">DELIVERABLES</p><p class="cs-meta-value">Brand guide v1.5 · Logo framework · Colour architecture · Merch system</p></div>
+            </div>
+        </header>
+
+        <!-- EDIT: hero image -->
+        <figure class="cs-section">
+            <img src="../assets/projects/nosm/hero.jpg" alt="Cover of the NOSM University brand guide, version 1.5">
+        </figure>
+
+        <!-- EDIT: overview -->
+        <p class="cs-overview">NOSM University's brand guide arrived from an external designer with structural problems, factual errors, and no policy for its three-language logo system. I took it from v1.0 to v1.5 — 300+ recommendations across three drafts — writing new sections, building decision frameworks, and presenting brand direction to senior leadership.</p>
+
+        <!-- EDIT: content sections — duplicate or delete whole <section> blocks -->
+        <section class="cs-section">
+            <h2>The brand guide</h2>
+            <p class="cs-caption">I rewrote and rebuilt the guide section by section: new copy for every logo version, an audience-based colour architecture researched against the University of Pittsburgh's model and adapted to NOSM's divisions, accessibility standards with WCAG contrast ratios, and colour names rooted in Northern Ontario.</p>
+            <figure>
+                <div class="cs-grid">
+                    <img src="../assets/projects/nosm/guide-colour.jpg" alt="Brand guide colour system page showing NOSM's named palette">
+                    <img src="../assets/projects/nosm/guide-logos.jpg" alt="Brand guide page showing English, French, and Anishinaabe logo variants">
+                </div>
+            </figure>
+        </section>
+
+        <section class="cs-section">
+            <h2>The logo decision framework</h2>
+            <p class="cs-caption">NOSM's logo exists in English, French, and Oji-Cree. Choosing between them is a genuine institutional tension — accessibility law, cultural representation, cost, and symbolism all pull in different directions. I authored a three-step, accessibility-first decision framework, in written and flowchart form, that gives anyone at the university a defensible answer.</p>
+            <figure>
+                <img src="../assets/projects/nosm/logo-framework.jpg" alt="Logo selection decision flowchart balancing accessibility requirements with cultural representation">
+            </figure>
+        </section>
+
+        <section class="cs-section">
+            <h2>Governance &amp; QA</h2>
+            <p class="cs-caption">Every recommendation ran through a colour-coded review system: cyan for new copy I wrote, yellow for structural notes, magenta for corrections, green for approvals. Three or more drafts per deliverable, 300+ recommendations in total — covering copy, layout, factual accuracy, and AODA/WCAG compliance.</p>
+            <figure>
+                <img src="../assets/projects/nosm/qa-pass.jpg" alt="Annotated brand guide page from the colour-coded QA review system">
+            </figure>
+        </section>
+
+        <section class="cs-section">
+            <h2>On merch</h2>
+            <p class="cs-caption">Corrected logo applications on real product photography — every garment in all three language variants, built in Photoshop to address brand misuse on existing university store items, and handed off as production-ready vendor files.</p>
+            <figure>
+                <div class="cs-grid">
+                    <img src="../assets/projects/nosm/merch-tee-eng.jpg" alt="T-shirt mockup with the English NOSM University logo">
+                    <img src="../assets/projects/nosm/merch-tee-ani.jpg" alt="T-shirt mockup with the Anishinaabe NOSM University logo">
+                </div>
+            </figure>
+        </section>
+
+        <!-- EDIT: outcome bullets -->
+        <section class="cs-outcome">
+            <h2>Outcome</h2>
+            <ul>
+                <li>Brand guide v1.5 adopted as the university's working standard</li>
+                <li>300+ recommendations across three drafts — copy, layout, factual accuracy, accessibility</li>
+                <li>A multilingual logo policy balancing AODA compliance with cultural representation</li>
+            </ul>
+        </section>
+
+        <!-- EDIT: point at the real prev/next case studies once they exist -->
+        <nav class="cs-pager" aria-label="More projects">
+            <a href="../index.html#projects">
+                <p class="cs-pager-label">← BACK</p>
+                <p class="cs-pager-title">All work</p>
+            </a>
+            <a class="cs-pager-next" href="../index.html#projects">
+                <p class="cs-pager-label">NEXT →</p>
+                <p class="cs-pager-title">More projects soon</p>
+            </a>
+        </nav>
+    </main>
+    <footer>
+        <p>© 2026 Ben Velkovski</p>
+        <p>El Psy Kongroo.</p>
+    </footer>
+</body>
+</html>
