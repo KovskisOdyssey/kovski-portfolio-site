@@ -6,7 +6,8 @@
     1. Save as case-studies/<project-slug>.html
     2. Update <title>, meta description, canonical, and og:* tags
     3. Update the header: title, subtitle, meta bar values
-    4. Swap the hero image + alt
+    4. Swap the hero image + alt, and rewrite the stat strip numbers
+       (keep the stats honest — delete the strip if a project has none)
     5. Edit/duplicate/delete the <section class="cs-section"> blocks
        (each block = h2 + caption + figure; figure is either a single
         <img> or a 2-up <div class="cs-grid">) — update EVERY img src
@@ -101,42 +102,54 @@
         <!-- EDIT: overview -->
         <p class="cs-overview">NOSM University's brand guide arrived from an external designer with structural problems, factual errors, and no policy for its three-language logo system. I took it from v1.0 to v1.5 — 300+ recommendations across three drafts — writing new sections, building decision frameworks, and presenting brand direction to senior leadership.</p>
 
+        <!-- EDIT: stat strip — 3-4 honest numbers from this project -->
+        <section class="cs-stats" aria-label="Project at a glance">
+            <div class="cs-stat"><p class="cs-stat-num">300+</p><p class="cs-stat-label">recommendations</p></div>
+            <div class="cs-stat"><p class="cs-stat-num">3+</p><p class="cs-stat-label">drafts reviewed</p></div>
+            <div class="cs-stat"><p class="cs-stat-num">3</p><p class="cs-stat-label">logo languages</p></div>
+            <div class="cs-stat"><p class="cs-stat-num">28</p><p class="cs-stat-label">guide pages</p></div>
+        </section>
+
         <!-- EDIT: content sections — duplicate or delete whole <section> blocks -->
         <section class="cs-section">
-            <h2>The brand guide</h2>
+            <h2><span class="cs-kicker" aria-hidden="true">01 — THE REBUILD</span>The brand guide</h2>
             <p class="cs-caption">I rewrote and rebuilt the guide section by section: new copy for every logo version, an audience-based colour architecture researched against the University of Pittsburgh's model and adapted to NOSM's divisions, accessibility standards with WCAG contrast ratios, and colour names rooted in Northern Ontario.</p>
             <figure>
                 <div class="cs-grid">
                     <img src="../assets/projects/nosm/guide-colour.jpg" alt="Brand guide colour system page showing NOSM's named palette">
                     <img src="../assets/projects/nosm/guide-logos.jpg" alt="Brand guide page showing English, French, and Anishinaabe logo variants">
                 </div>
+                <figcaption>Brand guide v1.5 — the colour architecture and trilingual logo pages</figcaption>
             </figure>
         </section>
 
         <section class="cs-section">
-            <h2>The logo decision framework</h2>
+            <h2><span class="cs-kicker" aria-hidden="true">02 — THE POLICY</span>The logo decision framework</h2>
             <p class="cs-caption">NOSM's logo exists in English, French, and Oji-Cree. Choosing between them is a genuine institutional tension — accessibility law, cultural representation, cost, and symbolism all pull in different directions. I authored a three-step, accessibility-first decision framework, in written and flowchart form, that gives anyone at the university a defensible answer.</p>
             <figure class="cs-doc">
                 <img src="../assets/projects/nosm/logo-framework.jpg" alt="Logo selection decision flowchart balancing accessibility requirements with cultural representation">
+                <figcaption>The decision framework, flowchart edition — accessibility first, then representation</figcaption>
             </figure>
         </section>
 
         <section class="cs-section">
-            <h2>Governance &amp; QA</h2>
+            <h2><span class="cs-kicker" aria-hidden="true">03 — THE PROCESS</span>Governance &amp; QA</h2>
             <p class="cs-caption">Every recommendation ran through a colour-coded review system: cyan for new copy I wrote, yellow for structural notes, magenta for corrections, green for approvals. Three or more drafts per deliverable, 300+ recommendations in total — covering copy, layout, factual accuracy, and AODA/WCAG compliance.</p>
             <figure class="cs-doc">
                 <img src="../assets/projects/nosm/qa-pass.jpg" alt="Annotated brand guide page from the colour-coded QA review system">
+                <figcaption>One spread of the QA pass — cyan: new copy · yellow: structure · magenta: corrections · green: approvals</figcaption>
             </figure>
         </section>
 
         <section class="cs-section">
-            <h2>On merch</h2>
+            <h2><span class="cs-kicker" aria-hidden="true">04 — THE ROLLOUT</span>In production</h2>
             <p class="cs-caption">Corrected logo applications on real product photography — every garment in all three language variants, built in Photoshop to address brand misuse on existing university store items, and handed off as production-ready vendor files.</p>
             <figure>
                 <div class="cs-grid">
                     <img src="../assets/projects/nosm/merch-tee-eng.jpg" alt="T-shirt mockup with the English NOSM University logo">
                     <img src="../assets/projects/nosm/merch-tee-ani.jpg" alt="T-shirt mockup with the Anishinaabe NOSM University logo">
                 </div>
+                <figcaption>Vendor-ready apparel mockups — English and Anishinaabe logo variants</figcaption>
             </figure>
         </section>
 
@@ -148,6 +161,12 @@
                 <li>300+ recommendations across three drafts — copy, layout, factual accuracy, accessibility</li>
                 <li>A multilingual logo policy balancing AODA compliance with cultural representation</li>
             </ul>
+        </section>
+
+        <!-- EDIT: closing call to action (usually fine as-is) -->
+        <section class="cs-cta">
+            <p>Looking for a designer who works across brand identity, print, and digital? Let's talk.</p>
+            <a class="btn primary" href="../index.html#contact">Get in touch</a>
         </section>
 
         <!-- EDIT: point at the real prev/next case studies once they exist -->
