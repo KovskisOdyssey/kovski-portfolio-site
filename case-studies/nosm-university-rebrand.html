@@ -10,7 +10,9 @@
     5. Edit/duplicate/delete the <section class="cs-section"> blocks
        (each block = h2 + caption + figure; figure is either a single
         <img> or a 2-up <div class="cs-grid">) — update EVERY img src
-        and alt inside the sections, they all point at this project
+       and alt inside the sections, they all point at this project.
+       Add class="cs-doc" to the figure for PORTRAIT/page-shaped
+       images so they get width-capped instead of rendering full width
 
     6. Rewrite the outcome strip bullets
     7. Point the pager at the real prev/next case study pages
@@ -114,7 +116,7 @@
         <section class="cs-section">
             <h2>The logo decision framework</h2>
             <p class="cs-caption">NOSM's logo exists in English, French, and Oji-Cree. Choosing between them is a genuine institutional tension — accessibility law, cultural representation, cost, and symbolism all pull in different directions. I authored a three-step, accessibility-first decision framework, in written and flowchart form, that gives anyone at the university a defensible answer.</p>
-            <figure>
+            <figure class="cs-doc">
                 <img src="../assets/projects/nosm/logo-framework.jpg" alt="Logo selection decision flowchart balancing accessibility requirements with cultural representation">
             </figure>
         </section>
@@ -122,7 +124,7 @@
         <section class="cs-section">
             <h2>Governance &amp; QA</h2>
             <p class="cs-caption">Every recommendation ran through a colour-coded review system: cyan for new copy I wrote, yellow for structural notes, magenta for corrections, green for approvals. Three or more drafts per deliverable, 300+ recommendations in total — covering copy, layout, factual accuracy, and AODA/WCAG compliance.</p>
-            <figure>
+            <figure class="cs-doc">
                 <img src="../assets/projects/nosm/qa-pass.jpg" alt="Annotated brand guide page from the colour-coded QA review system">
             </figure>
         </section>

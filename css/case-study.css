@@ -95,6 +95,13 @@
     border: 1px solid var(--btn-shadow);
 }
 
+/* page-shaped scans (portrait documents): cap width so a full-width
+   letter page doesn't tower over the layout at desktop sizes */
+.cs-section figure.cs-doc img {
+    max-width: 42rem;
+    margin: 0 auto;
+}
+
 /* tighter rhythm than the homepage's 6rem section gap */
 main {
     gap: 4rem;
@@ -202,5 +209,9 @@ main {
 
     .cs-meta {
         gap: .75rem 1.5rem;
+    }
+
+    .cs-outcome {
+        padding: 1.25rem 1.5rem;
     }
 }
