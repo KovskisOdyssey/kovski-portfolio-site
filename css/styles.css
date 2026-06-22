@@ -215,7 +215,8 @@ h3 {
 
 .skillcontent {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(6.25rem, 1fr));
+    grid-template-columns: repeat(auto-fill, 8.5rem);
+    justify-content: center;
     gap: 1rem;
 }
 
