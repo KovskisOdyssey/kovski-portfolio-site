@@ -107,14 +107,14 @@ nav a:first-child {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 1.75rem;
+    gap: 1.5rem;
     text-align: center;
 }
 
 .hero h1 {
     font-size: clamp(3rem, 9vw, 6rem);
-    line-height: 1.05;
-    margin: 4rem 0 0 0;
+    line-height: 1.1;
+    margin: 0 0 0 0;
     font-weight: 500;
 }
 
@@ -209,8 +209,37 @@ h3 {
     color: var(--text-desc);
 }
 
+.hero-name {
+    position: relative;
+}
+
+.avatar {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    width: 5rem;
+    animation: bug-walk 6s linear infinite;
+}
+
 .avatar img {
     display: block;
+    /* dark is the default theme, so the inverted look is the base state.
+       smoothly cross-fade the filter when the user toggles themes. */
+    transition: filter .3s ease;
+    filter: invert(1) hue-rotate(180deg);
+    width: 5rem;
+}
+
+/* light mode uses the original, un-inverted gif */
+[data-theme="light"] .avatar img {
+    filter: none;
+}
+
+@keyframes bug-walk {
+    0%   { left: 0%;                transform: scaleX(-1);  }
+    49%  { left: calc(100% - 5rem); transform: scaleX(-1);  }
+    50%  { left: calc(100% - 5rem); transform: scaleX(1); }
+    100% { left: 0%;                transform: scaleX(1); }
 }
 
 .skillcontent {
@@ -684,7 +713,7 @@ a:visited {
     }
 
     .hero h1 {
-        margin-top: 2rem;
+        margin-top: 0rem;
     }
 
     .aboutbody {
