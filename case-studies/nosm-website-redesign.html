@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nosm.ca Redesign Proposal | Ben Velkovski</title>
+    <meta name="description" content="Case study: a 1,900-page sitemap audit, analytics-driven homepage redesign, and a hand-coded WCAG 2.2 AAA prototype, pitched in person to NOSM's senior leadership.">
+    <link rel="canonical" href="https://kovskidesign.com/case-studies/nosm-website-redesign.html">
+    <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="nosm.ca Redesign Proposal — Ben Velkovski">
+    <meta property="og:description" content="A 1,900-page sitemap audit, analytics-driven homepage redesign, and a hand-coded WCAG 2.2 AAA prototype, pitched in person to NOSM's senior leadership.">
+    <meta property="og:url" content="https://kovskidesign.com/case-studies/nosm-website-redesign.html">
+    <meta property="og:image" content="https://kovskidesign.com/assets/projects/website/hero.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Apply the saved theme before first paint to avoid a flash of the wrong theme -->
+    <script>
+        (function () {
+            var theme = null;
+            try { theme = localStorage.getItem("theme"); } catch (e) {}
+            if (!theme && window.matchMedia("(prefers-color-scheme: light)").matches) theme = "light";
+            if (theme) document.documentElement.setAttribute("data-theme", theme);
+        })();
+    </script>
+
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/case-study.css">
+    <script src="../js/main.js" defer></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <nav>
+        <a href="../index.html">Ben Velkovski</a>
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#skills">Skills</a>
+        <a href="../index.html#projects">Work</a>
+        <a href="../index.html#contact">Contact</a>
+        <button id="theme-toggle" aria-label="Light theme" aria-pressed="false">
+            <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="5"/>
+                <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+            </svg>
+            <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+            </svg>
+        </button>
+    </nav>
+    <main id="main">
+        <header class="cs-header">
+            <a class="cs-back" href="../index.html#projects">← All work</a>
+            <h1>nosm.ca Redesign Proposal</h1>
+            <p class="cs-subtitle">An audit, a prototype, and a pitch to the people who could say yes.</p>
+            <div class="cs-meta">
+                <div><p class="cs-meta-label">ROLE</p><p class="cs-meta-value">Graphic Designer · UX · Front-end</p></div>
+                <div><p class="cs-meta-label">YEAR</p><p class="cs-meta-value">2025</p></div>
+                <div><p class="cs-meta-label">CLIENT</p><p class="cs-meta-value">NOSM University</p></div>
+                <div><p class="cs-meta-label">DELIVERABLES</p><p class="cs-meta-value">Sitemap audit · Analytics report · Homepage redesign · Coded WCAG 2.2 AAA prototype</p></div>
+            </div>
+        </header>
+
+        <figure class="cs-section cs-bleed">
+            <img src="../assets/projects/website/hero.jpg" alt="Redesigned nosm.ca homepage: Education Built for the North">
+        </figure>
+
+        <p class="cs-overview"><strong>nosm.ca carries 1,900+ pages for a university of 224 students.</strong> UT Austin serves 53,800 students with a smaller site. On top of that, AODA accessibility law carries fines of up to $100,000 a day for non-compliance. I audited every URL, pulled the analytics with our digital strategist, redesigned the homepage, coded it as a working prototype, and presented the case in person to External Relations.</p>
+
+        <div class="cs-pull">
+            <p class="cs-pull-num">1,903</p>
+            <p class="cs-pull-line">rows in the sitemap audit. Every URL on nosm.ca, categorized: content, utility, auto-generated, orphaned, or dead.</p>
+        </div>
+
+        <section class="cs-section">
+            <h2><span class="cs-kicker" aria-hidden="true">01 — THE AUDIT</span>Reading all 1,900 pages so nobody else has to</h2>
+            <p class="cs-caption">Blank pages from 2018. Orphaned pages still indexed by Google. Public testing pages. I categorized every URL, benchmarked the structure against UT Austin, and costed the cleanup at roughly 2,000 hours: one full-time employee for a year. Then I checked the analytics. Of 1.16 million page views, a fifth land on the homepage and a third go to just three destinations. <strong>The site is huge; the traffic isn't.</strong></p>
+        </section>
+
+        <section class="cs-section">
+            <h2><span class="cs-kicker" aria-hidden="true">02 — THE REDESIGN</span>Before and after</h2>
+            <p class="cs-caption"><strong>The current homepage is a news dump.</strong> The redesign leads with what the analytics say people actually come for: programs, admissions, and the three destinations that carry a third of all traffic. Navigation goes audience-first, and every design decision maps to one of NOSM's four strategic pillars.</p>
+            <figure class="cs-compare">
+                <div>
+                    <img src="../assets/projects/website/before.jpg" alt="Current nosm.ca homepage">
+                    <span class="cs-compare-label">BEFORE</span>
+                </div>
+                <div>
+                    <img src="../assets/projects/website/after.jpg" alt="Redesigned nosm.ca homepage">
+                    <span class="cs-compare-label">AFTER</span>
+                </div>
+            </figure>
+        </section>
+
+        <section class="cs-section">
+            <h2><span class="cs-kicker" aria-hidden="true">03 — THE PROTOTYPE</span>Not a Figma file</h2>
+            <p class="cs-caption">The redesign exists as a working site: semantic HTML, ARIA on every interactive element, an 18px body-text baseline, AAA contrast throughout, and a design-token system in CSS custom properties. From the pitch deck: <strong>accessibility isn't a feature, it's the baseline. Everything above it is design.</strong></p>
+            <figure class="cs-doc">
+                <img src="../assets/projects/website/prototype-full.jpg" alt="Full-page screenshot of the coded homepage prototype">
+                <figcaption>The coded prototype, top to footer</figcaption>
+            </figure>
+        </section>
+
+        <section class="cs-outcome">
+            <h2>TL;DR</h2>
+            <ul>
+                <li>Presented in person to the External Relations team, including the AVP.</li>
+                <li>Every recommendation backed by NOSM's own analytics and a costed remediation estimate.</li>
+                <li>Status: a proposal. The audit and the prototype exist so the university can act on them.</li>
+            </ul>
+        </section>
+
+        <section class="cs-cta">
+            <p>Want a designer who audits 1,900 pages before touching the homepage? Let's talk.</p>
+            <a class="btn primary" href="../index.html#contact">Get in touch</a>
+        </section>
+
+        <nav class="cs-pager" aria-label="More projects">
+            <a href="cepd-brand-identity.html">
+                <p class="cs-pager-label">← PREVIOUS</p>
+                <p class="cs-pager-title">CEPD Brand Identity</p>
+            </a>
+            <a class="cs-pager-next" href="logo-redesigns.html">
+                <p class="cs-pager-label">NEXT →</p>
+                <p class="cs-pager-title">Logo Redesigns</p>
+            </a>
+        </nav>
+    </main>
+    <footer>
+        <p>© 2026 Ben Velkovski</p>
+        <p>El Psy Kongroo.</p>
+    </footer>
+</body>
+</html>

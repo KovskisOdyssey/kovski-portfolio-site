@@ -116,9 +116,18 @@
 .cs-caption {
     margin: 0;
     max-width: 46em;
+    font-size: 1.05rem;
     line-height: 1.6;
     font-weight: 300;
     color: var(--text-desc);
+}
+
+/* anchor phrases: one bolded claim per paragraph so the text doesn't
+   read as an undifferentiated wash */
+.cs-caption strong,
+.cs-overview strong {
+    color: var(--text);
+    font-weight: 500;
 }
 
 .cs-section figure {
@@ -135,8 +144,16 @@
 
 /* page-shaped scans (portrait documents): cap width so a full-width
    letter page doesn't tower over the layout at desktop sizes */
-.cs-section figure.cs-doc img {
+.cs-section figure.cs-doc img,
+figure.cs-section.cs-doc img {
     max-width: 42rem;
+    margin: 0 auto;
+}
+
+/* tighter cap for phone-shaped media (9:16 gifs, story mockups) */
+.cs-section figure.cs-doc-narrow img,
+figure.cs-section.cs-doc-narrow img {
+    max-width: 24rem;
     margin: 0 auto;
 }
 
@@ -159,33 +176,41 @@ main {
     gap: 1.5rem;
 }
 
-/* outcome strip */
+/* outcome: the page's TL;DR — a ledger-style totals line. Sakura rule on
+   top, small label, results set big in full text colour so they pop
+   against the muted captions. No box. */
 .cs-outcome {
-    border: 1px solid var(--sakura-dark);
-    border-left: 6px solid var(--sakura);
-    border-radius: 16px;
-    background-color: var(--btn-bg);
-    padding: 1.5rem 2rem;
+    border-top: 2px solid var(--sakura);
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
 .cs-outcome h2 {
     text-align: left;
-    font-size: 1.5rem;
-    margin: 0 0 .75rem;
+    margin: 0;
+    font-size: .8rem;
+    font-weight: 600;
+    letter-spacing: .12em;
+    color: var(--sakura-text);
 }
 
 .cs-outcome ul {
+    list-style: none;
     margin: 0;
-    padding-left: 1.25rem;
+    padding: 0;
     display: flex;
     flex-direction: column;
-    gap: .5rem;
-    color: var(--text-desc);
-    line-height: 1.5;
+    gap: 1.25rem;
+    max-width: 46em;
 }
 
-.cs-outcome li::marker {
-    color: var(--sakura);
+.cs-outcome li {
+    font-size: 1.5rem;
+    line-height: 1.4;
+    font-weight: 400;
+    color: var(--text);
 }
 
 /* closing call to action */
@@ -270,6 +295,10 @@ main {
     .cs-cta p {
         font-size: 1.15rem;
     }
+
+    .cs-outcome li {
+        font-size: 1.25rem;
+    }
 }
 
 @media (max-width: 30em) {
@@ -280,8 +309,98 @@ main {
     .cs-meta {
         gap: .75rem 1.5rem;
     }
+}
 
-    .cs-outcome {
-        padding: 1.25rem 1.5rem;
+/* ═══ layout kit — compose per page; no two pages the same shape ═══ */
+
+/* full-bleed: break out into the body's side padding (edge-to-edge below
+   the 75em cap, wide breakout above it — no 100vw, no overflow hacks) */
+.cs-bleed {
+    width: calc(100% + 4rem);
+    margin-inline: -2rem;
+}
+.cs-bleed img {
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+}
+
+/* 3-up grid (2-up is the existing .cs-grid) */
+.cs-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+/* before / after pair with corner labels */
+.cs-compare {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+.cs-compare > div {
+    position: relative;
+}
+.cs-compare-label {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    padding: .3rem .7rem;
+    border-radius: 999px;
+    font-size: .7rem;
+    font-weight: 600;
+    letter-spacing: .12em;
+    color: var(--text);
+    background-color: var(--btn-bg);
+    border: 1px solid var(--btn-shadow);
+}
+
+/* pull moment: one big number or one big line, standalone */
+.cs-pull {
+    padding: 1rem 0;
+    text-align: center;
+}
+.cs-pull-num {
+    margin: 0;
+    font-size: clamp(3rem, 10vw, 6rem);
+    font-weight: 600;
+    line-height: 1;
+    color: var(--sakura-text);
+}
+.cs-pull-line {
+    margin: .75rem auto 0;
+    max-width: 28em;
+    font-size: 1.15rem;
+    font-weight: 300;
+    color: var(--text-desc);
+}
+
+/* logo tile: white plate so dark/transparent marks read in both themes.
+   border-box is load-bearing: normalize.css keeps content-box, and
+   width:100% + padding would overflow the grid column without it */
+.cs-logo-tile img {
+    box-sizing: border-box;
+    background-color: #fff;
+    padding: 2.5rem;
+}
+
+/* navy plate for white/reversed artwork (e.g. white SVG logos) */
+.cs-logo-tile--dark img {
+    background-color: #00295a;
+}
+
+/* in compare rows, force equal plates and letterbox the marks inside */
+.cs-compare .cs-logo-tile img {
+    aspect-ratio: 3 / 2;
+    object-fit: contain;
+}
+
+@media (max-width: 48em) {
+    .cs-grid-3,
+    .cs-compare {
+        grid-template-columns: 1fr;
+    }
+    .cs-logo-tile img {
+        padding: 1.5rem;
     }
 }

@@ -28,7 +28,6 @@ if (toggle) {
 
 /* ===== typewriter ===== */
 
-// TODO(human): pick the words and pacing that sound like you.
 const WORDS = ["Designing", "Branding", "Illustrating", "Animating", "Building"];
 const TYPE_MS = 90;     // delay per character while typing
 const DELETE_MS = 45;   // delay per character while deleting
