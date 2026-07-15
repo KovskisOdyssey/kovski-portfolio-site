@@ -86,7 +86,9 @@ body {
     flex-direction: column;
 }
 
-nav {
+/* scoped to the top bar: case-study pages have a second <nav> (the
+   prev/next pager) that must not inherit these */
+body > nav {
     font-size: 1.25rem;
     font-weight: 400;
     display: flex;
@@ -95,7 +97,7 @@ nav {
     gap: 2rem;
 }
 
-nav a:first-child {
+body > nav a:first-child {
     font-weight: 500;
     font-size: 1.75rem;
     margin-right: auto;
@@ -698,7 +700,7 @@ a:visited {
 
 /* tablet portrait / large phone */
 @media (max-width: 48em) {
-    nav {
+    body > nav {
         flex-wrap: wrap;
         gap: 1rem 1.5rem;
         font-size: 1.1rem;

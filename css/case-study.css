@@ -231,11 +231,14 @@ main {
     max-width: 30em;
 }
 
-/* prev / next pager */
+/* prev / next pager — ruled off from the article so it and the footer
+   read as one anchored end-block instead of chips floating in space */
 .cs-pager {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
+    border-top: 1px solid var(--border);
+    padding-top: 2.5rem;
 }
 
 .cs-pager a,
