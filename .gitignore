@@ -5,8 +5,5 @@ Thumbs.db
 .claude
 SKILLS.md
 skills
-# personal / source material — not for the public site
-assets/Portfolio/
-assets/*.pdf
-assets/PROJECT LOG*
-assets/*ref*.jpg
+/Assets - DO NOT UPLOAD
+
